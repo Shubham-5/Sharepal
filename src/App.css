@@ -1,38 +1,148 @@
 .App {
-  text-align: center;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.active {
+    border-left: 5px solid rgb(9, 23, 71) !important;
+    background-color: rgb(214, 229, 255) !important;
+    color: rgb(59, 59, 59) !important;
+    border-top: 0px !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.shopcard {
+    position: relative;
+    max-width: 260px;
+    min-width: 260px !important;
+    order: 1;
+    min-height: 0px;
+    height: max-content;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: calc(100% - 20px);
+    margin: 10px;
+    overflow: visible;
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(231, 227, 227);
+    border-radius: 10px;
+    box-shadow: rgb(231 227 227 / 35%) 1px 2px 6px 2px;
+    cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.item-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.item-img img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    object-fit: contain;
+    border-radius: 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item-subtitle {
+    padding: 5px 5px;
+    min-width: 0px;
+    min-height: 0px;
+    height: max-content;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: calc(100% - 0px);
+    margin: 0px;
+    justify-content: flex-start;
+    overflow: visible;
+    background-color: rgba(250, 250, 250, 0.9);
+    border-radius: 0px;
+}
+
+.more-categories {
+    background-color: #dfdfdf;
+    color: rgb(59, 59, 59) !important;
+}
+
+.more-categories-card {
+    min-width: 260px;
+    height: 100%;
+    justify-content: flex-start;
+    background-color: #ffff;
+    border-radius: 8px;
+    min-height: max-content;
+}
+
+.coupons-categories-card {
+    min-width: 260px;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: rgb(170 170 170) 2px 2px 4px 0px;
+}
+
+.discount {
+    min-width: 70px;
+    max-width: 80px;
+    justify-content: flex-start;
+    overflow: visible;
+    color: white;
+    background-color: rgb(9, 39, 235);
+    border-radius: 0px 50px 50px 0px;
+}
+
+.btm-nav {
+    min-width: 266px;
+    max-width: 950px;
+    height: 56px;
+    position: fixed;
+    z-index: 1503;
+    background-color: rgb(255, 255, 255);
+    left: 0px;
+    right: 0px;
+    top: unset;
+    bottom: 0px;
+    vertical-align: baseline;
+}
+
+.btm-nav>div {
+    white-space: pre-wrap;
+    height: 20px;
+    width: 70.9375px;
+    overflow: visible;
+    word-break: break-word;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+    text-align: center;
+    line-height: 1.4;
+}
+
+.m-sidebar {
+    width: 100vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll !important;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: #ffff;
+}
+
+.m-item {
+    border: 2px solid blue !important;
+    list-style: none;
+    border-radius: 19px;
+    text-align: center;
+    width: 120px !important;
+}
+
+.m-item-active {
+    background-color: rgb(9, 23, 71) !important;
+    color: #ffff !important;
 }

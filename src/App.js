@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import BottomNav from "./components/BottomNav";
+import Coupons from "./components/Coupons";
+import MoreCategories from "./components/MoreCategories";
+import ShopItems from "./components/ShopItems";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <BottomNav />
+      <section className='pt-5 row'>
+        <Sidebar />
+        <ShopItems />
+      </section>
+      <section className='my-3'>
+        <Coupons />
+      </section>
+      <section className='more-categories'>
+        <MoreCategories />
+      </section>
     </div>
   );
 }
